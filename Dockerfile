@@ -1,5 +1,3 @@
-FROM openjdk:8-jre-alpine
-
 FROM bigtruedata/scala:2.10.6
 
 Run wget -O- "https://github.com/sbt/sbt/releases/download/v0.13.15/sbt-0.13.15.tgz" \
