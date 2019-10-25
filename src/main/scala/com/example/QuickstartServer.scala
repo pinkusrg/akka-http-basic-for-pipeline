@@ -33,8 +33,7 @@ object QuickstartServer extends App with UserRoutes {
 
   serverBinding.onComplete {
     case Success(bound) =>
-      println(s"pinku is online at http://${bound.localAddress.getHostString}:${bound.localAddress.getPort}/")
-      Thread.sleep(60000)
+      println(s"server is online at http://${bound.localAddress.getHostString}:${bound.localAddress.getPort}/")
 //       system.terminate()
     case Failure(e) =>
       Console.err.println(s"Server could not start!")
