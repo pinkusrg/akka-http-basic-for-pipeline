@@ -29,7 +29,7 @@ object QuickstartServer extends App with UserRoutes {
   //#main-class
 
   //#http-server
-  val serverBinding: Future[Http.ServerBinding] = Http().bindAndHandle(routes, "localhost", 8999)
+  val serverBinding: Future[Http.ServerBinding] = Http().bindAndHandle(routes, "0.0.0.0", 8999)
 
   serverBinding.onComplete {
     case Success(bound) =>
